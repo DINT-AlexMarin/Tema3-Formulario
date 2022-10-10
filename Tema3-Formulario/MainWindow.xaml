@@ -9,57 +9,69 @@
     <DockPanel LastChildFill="True">
         <Label Margin="5" DockPanel.Dock="Top" Content="Formulario" FontSize="40" HorizontalAlignment="Center" FontWeight="Bold"></Label>
         <DockPanel Margin="5" DockPanel.Dock="Bottom" LastChildFill="False">
-            <TextBlock Text="Alex Marín" FontSize="20" DockPanel.Dock="Left"></TextBlock>
+            <TextBlock FontStyle="Italic" Text="Alex Marín" FontSize="20" DockPanel.Dock="Left"></TextBlock>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
                 <Button Width="100" Height="25" Margin="5" Content="Aceptar"></Button>
                 <Button Width="100" Height="25" Margin="5" Content="Cancelar"></Button>
             </StackPanel>
         </DockPanel>
-        <Image DockPanel.Dock="Right" Source="assets/foto.jpg" Width="200" Stretch="Fill" Margin="10"></Image>
-        <StackPanel Margin="20">
-            <Border Background="#FFF1F945" BorderBrush="Black" Margin="5" Padding="5" BorderThickness="3" CornerRadius="3">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="70"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="20"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <TextBlock Margin="5" Text="Nombre:" Grid.Row="0" Grid.Column="0"></TextBlock>
-                    <TextBox Margin="5" Grid.Row="0" Grid.Column="1"></TextBox>
-                    <Image Margin="0" Grid.Column="2" Grid.Row="0" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Máximo 100 carácteres" MouseEnter="mouseEnter"/>
-                    <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="Edad:"></TextBlock>
-                    <TextBox Margin="5" Grid.Row="1" Grid.Column="1"></TextBox>
-                    <Image Margin="0" Grid.Column="2" Grid.Row="1" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Número entre 0 y 100" MouseEnter="mouseEnter"/>
-                    <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="Dirección:"></TextBlock>
-                    <TextBox Margin="5" Grid.Row="2" Grid.Column="1"></TextBox>
-                    <Image Margin="0" Grid.Column="2" Grid.Row="2" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Incluir el código postal" MouseEnter="mouseEnter"/>
-                </Grid>
-            </Border>
-            <Border Background="#FFFF954C" BorderBrush="Black" Margin="5" Padding="5" BorderThickness="3" CornerRadius="3">
-                <StackPanel Orientation="Horizontal">
-                    <GroupBox Header="Aficiones" Width="150" Margin="5" BorderBrush="Blue" VerticalAlignment="Center">
-                        <StackPanel>
-                            <CheckBox Content="Hacer deporte"></CheckBox>
-                            <CheckBox Content="Viajar"></CheckBox>
-                            <CheckBox Content="Ver series"></CheckBox>
-                            <CheckBox Content="Leer comics"></CheckBox>
-                        </StackPanel>
-                    </GroupBox>
-                    <GroupBox Header="Estado Civil" Width="150" Margin="5" BorderBrush="Blue" VerticalAlignment="Center">
-                        <StackPanel>
-                            <RadioButton Content="Soltero" GroupName="ec"></RadioButton>
-                            <RadioButton Content="Casado" GroupName="ec"></RadioButton>
-                            <RadioButton Content="Divorciado" GroupName="ec"></RadioButton>
-                            <RadioButton Content="Viudo" GroupName="ec"></RadioButton>
-                        </StackPanel>
-                    </GroupBox>
-                </StackPanel>
-            </Border>
-        </StackPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Image Grid.Column="1" Grid.RowSpan="3" Source="assets/foto.jpg" Width="200" Stretch="Fill" Margin="10"></Image>
+            <StackPanel Grid.Column="0" Grid.RowSpan="3" Margin="20">
+                <Border Background="#FFF1F945" BorderBrush="Black" Margin="5" Padding="5" BorderThickness="3" CornerRadius="3">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="20"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="5" Text="Nombre:" Grid.Row="0" Grid.Column="0"></TextBlock>
+                        <TextBox Margin="5" Grid.Row="0" Grid.Column="1"></TextBox>
+                        <Image Margin="0" Grid.Column="2" Grid.Row="0" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Máximo 100 carácteres" MouseEnter="mouseEnter"/>
+                        <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="Edad:"></TextBlock>
+                        <TextBox Margin="5" Grid.Row="1" Grid.Column="1"></TextBox>
+                        <Image Margin="0" Grid.Column="2" Grid.Row="1" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Número entre 0 y 100" MouseEnter="mouseEnter"/>
+                        <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="Dirección:"></TextBlock>
+                        <TextBox Margin="5" Grid.Row="2" Grid.Column="1"></TextBox>
+                        <Image Margin="0" Grid.Column="2" Grid.Row="2" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Incluir el código postal" MouseEnter="mouseEnter"/>
+                    </Grid>
+                </Border>
+                <Border Background="#FFFF954C" BorderBrush="Black" Margin="5" Padding="5" BorderThickness="3" CornerRadius="3">
+                    <StackPanel Orientation="Horizontal">
+                        <GroupBox Header="Aficiones" Width="150" Margin="5" BorderBrush="Blue" VerticalAlignment="Center">
+                            <StackPanel>
+                                <CheckBox Content="Hacer deporte"></CheckBox>
+                                <CheckBox Content="Viajar"></CheckBox>
+                                <CheckBox Content="Ver series"></CheckBox>
+                                <CheckBox Content="Leer comics"></CheckBox>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="Estado Civil" Width="150" Margin="5" BorderBrush="Blue" VerticalAlignment="Center">
+                            <StackPanel>
+                                <RadioButton Content="Soltero" GroupName="ec"></RadioButton>
+                                <RadioButton Content="Casado" GroupName="ec"></RadioButton>
+                                <RadioButton Content="Divorciado" GroupName="ec"></RadioButton>
+                                <RadioButton Content="Viudo" GroupName="ec"></RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
     </DockPanel>
 </Window>
