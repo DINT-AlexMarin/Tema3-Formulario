@@ -11,8 +11,8 @@
         <DockPanel Margin="5" DockPanel.Dock="Bottom" LastChildFill="False">
             <TextBlock FontStyle="Italic" Text="Alex Marín" FontSize="20" DockPanel.Dock="Left"></TextBlock>
             <StackPanel Orientation="Horizontal" DockPanel.Dock="Right">
-                <Button Width="100" Height="25" Margin="5" Content="Aceptar"></Button>
-                <Button Width="100" Height="25" Margin="5" Content="Cancelar"></Button>
+                <Button Content="Aceptar"></Button>
+                <Button Content="Cancelar"></Button>
             </StackPanel>
         </DockPanel>
         <Grid>
@@ -28,7 +28,7 @@
 
             <Image Grid.Column="1" Grid.RowSpan="3" Source="assets/foto.jpg" Width="200" Stretch="Fill" Margin="10"></Image>
             <StackPanel Grid.Column="0" Grid.RowSpan="3" Margin="20">
-                <Border Background="#FFF1F945" BorderBrush="Black" Margin="5" Padding="5" BorderThickness="3" CornerRadius="3">
+                <Border Background="#FFF1F945" Style="{StaticResource Bordes}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="70"></ColumnDefinition>
@@ -36,24 +36,24 @@
                             <ColumnDefinition Width="20"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
-                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
-                        <TextBlock Margin="5" Text="Nombre:" Grid.Row="0" Grid.Column="0"></TextBlock>
-                        <TextBox Margin="5" Grid.Row="0" Grid.Column="1"></TextBox>
-                        <Image Margin="0" Grid.Column="2" Grid.Row="0" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Máximo 100 carácteres" MouseEnter="mouseEnter"/>
-                        <TextBlock Margin="5" Grid.Row="1" Grid.Column="0" Text="Edad:"></TextBlock>
-                        <TextBox Margin="5" Grid.Row="1" Grid.Column="1"></TextBox>
-                        <Image Margin="0" Grid.Column="2" Grid.Row="1" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Número entre 0 y 100" MouseEnter="mouseEnter"/>
-                        <TextBlock Margin="5" Grid.Row="2" Grid.Column="0" Text="Dirección:"></TextBlock>
-                        <TextBox Margin="5" Grid.Row="2" Grid.Column="1"></TextBox>
-                        <Image Margin="0" Grid.Column="2" Grid.Row="2" Source="assets/info.png" Width="20" Height="20" Stretch="Fill" Tag="Incluir el código postal" MouseEnter="mouseEnter"/>
+                        <TextBlock Text="Nombre:" Grid.Row="0" Grid.Column="0"></TextBlock>
+                        <TextBox Grid.Row="0" Grid.Column="1"></TextBox>
+                        <Image Grid.Column="2" Grid.Row="0" ToolTip="Máximo 100 carácteres" Style="{StaticResource info}"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="Edad:"></TextBlock>
+                        <TextBox Grid.Row="1" Grid.Column="1"></TextBox>
+                        <Image Grid.Column="2" Grid.Row="1" ToolTip="Número entre 0 y 100" Style="{StaticResource info}"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="Dirección:"></TextBlock>
+                        <TextBox Grid.Row="2" Grid.Column="1"></TextBox>
+                        <Image Grid.Column="2" Grid.Row="2" ToolTip="Incluir el código postal" Style="{StaticResource info}"/>
                     </Grid>
                 </Border>
-                <Border Background="#FFFF954C" BorderBrush="Black" Margin="5" Padding="5" BorderThickness="3" CornerRadius="3">
+                <Border Background="#FFFF954C" Style="{StaticResource Bordes}">
                     <StackPanel Orientation="Horizontal">
-                        <GroupBox Header="Aficiones" Width="150" Margin="5" BorderBrush="Blue" VerticalAlignment="Center">
+                        <GroupBox Header="Aficiones">
                             <StackPanel>
                                 <CheckBox Content="Hacer deporte"></CheckBox>
                                 <CheckBox Content="Viajar"></CheckBox>
@@ -61,12 +61,12 @@
                                 <CheckBox Content="Leer comics"></CheckBox>
                             </StackPanel>
                         </GroupBox>
-                        <GroupBox Header="Estado Civil" Width="150" Margin="5" BorderBrush="Blue" VerticalAlignment="Center">
+                        <GroupBox Header="Estado Civil">
                             <StackPanel>
-                                <RadioButton Content="Soltero" GroupName="ec"></RadioButton>
-                                <RadioButton Content="Casado" GroupName="ec"></RadioButton>
-                                <RadioButton Content="Divorciado" GroupName="ec"></RadioButton>
-                                <RadioButton Content="Viudo" GroupName="ec"></RadioButton>
+                                <RadioButton Content="Soltero"></RadioButton>
+                                <RadioButton Content="Casado"></RadioButton>
+                                <RadioButton Content="Divorciado"></RadioButton>
+                                <RadioButton Content="Viudo"></RadioButton>
                             </StackPanel>
                         </GroupBox>
                     </StackPanel>
